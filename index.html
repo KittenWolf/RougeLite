@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Tinos:400,400i&amp;subset=cyrillic" rel="stylesheet">
+		
+		<link rel="stylesheet" href="src/styles/main.css">
+
+		<title>Rouge Lite</title>		
+		<!-- <script type="text/javascript" src="/shared/3rdparty/jquery/jquery.js" language="javascript1.1"></script> -->
+		<!-- <script src="index.js"></script> -->
+	</head>
+	<body>
+		<div class="container">
+			<a href="scene-builder.html">Scene builder</a>
+
+			<h1>Игровое поле</h1>
+			<div class="field-box">
+				<div id="field" class="field">
+					
+				</div>
+			</div>
+	
+			<div class="cl"></div>
+	
+			<h1>Инвентарь</h1>
+			<div class="inventory-box"><div class="inventory"></div></div>
+		</div>		
+
+		<!-- Idk why, but i can't use modules in js (import / export) with my live server -->
+		<script src="src/scripts/lib.js"></script>
+		<script src="src/scripts/map.js"></script>
+		
+		<script src="src/scripts/gameObjects/gameObject.js"></script>
+		<script src="src/scripts/gameObjects/characters/character.js"></script>
+		<script src="src/scripts/gameObjects/characters/player.js"></script>
+		<script src="src/scripts/gameObjects/characters/enemy.js"></script>
+		
+		<script src="src/scripts/gameObjects/items/healthPoison.js"></script>
+		<script src="src/scripts/gameObjects/items/sword.js"></script>
+		
+		<script src="src/scripts/gameObjects/environment.js"></script>
+		
+		<script src="src/scripts/scene.js"></script>
+		<script src="src/scripts/game.js"></script>
+	</body>
+</html>

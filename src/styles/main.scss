@@ -1,0 +1,67 @@
+$source_path: "../images/";
+
+$corridor_tile: $source_path + "tile-F.png";
+$wall_tile: $source_path + "tile-W.png";
+$enemy_tile: $source_path + "tile-E.png";
+$player_tile: $source_path + "tile-P.png";
+$health_poison_tile: $source_path + "tile-HP.png";
+$sward_tile: $source_path + "tile-SW.png";
+
+* { box-sizing: border-box; }
+body, html { height: 100%; }
+body { 
+    background-color: #000000; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+}
+h1 { font-family: "Playfair Display"; font-size: 30px; padding: 10px 0px; margin: 0px; }
+
+.container {
+    width: 100%;
+    padding: 0 2%;
+}
+.field-box { 
+    border: 2px solid #d0d0d0; 
+    float: left; 
+}
+.field {
+    position: relative; 
+}
+
+.field .tile { 
+    position: relative;
+    display: inline-block;
+    margin-bottom: -4px;
+    background-size: 100%;
+    background-image: #ffffff;
+    z-index: 5; 
+}
+.field .tileF { background-image: url($corridor_tile); }
+.field .tileW { background-image: url($wall_tile); }
+.field .tileE { background-image: url($enemy_tile); z-index: 10; }
+.field .tileP { background-image: url($player_tile); z-index: 10; }
+.field .tileHP { background-image: url($health_poison_tile); z-index: 9; }
+.field .tileSW { background-image: url($sward_tile); z-index: 9; }
+
+.field .tileE .health { 
+    height: 3px; 
+    background-color: #ff0000; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 11; 
+}
+.field .tileP .health { 
+    height: 3px; 
+    background-color: #00ff00; 
+    position: absolute; 
+    left: 0px;
+    top: 0px; 
+    z-index: 11; 
+}
+
+.inventory-box { border: 2px solid #d0d0d0; float: left; }
+.inventory { position: relative; width: 800px; height: 32px; }
+
+.cl { clear: both; display: block; }
