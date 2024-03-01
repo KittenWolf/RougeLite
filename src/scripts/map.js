@@ -194,10 +194,9 @@ class Map {
 
         let playZones = this.getPlayZones();
 
-        // Replace constant values on auto generated later.
-        // this.generateGameObjects(playZones, 10, tileLib.characters.rouge.tile);
-        // this.generateGameObjects(playZones, 10, tileLib.items.healthPoison.tile);
-        // this.generateGameObjects(playZones, 5, tileLib.items.sword.tile);
+        this.generateGameObjects(playZones, 10, tileLib.characters.rouge.tile);
+        this.generateGameObjects(playZones, 10, tileLib.items.healthPoison.tile);
+        this.generateGameObjects(playZones, 5, tileLib.items.sword.tile);
         this.generateGameObjects(playZones, 1, tileLib.characters.player.tile);
     }
 

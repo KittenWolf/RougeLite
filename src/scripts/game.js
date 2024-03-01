@@ -2,13 +2,13 @@
 class GameConfiguration {
     characterMaxHealth;
     characterWeaponDamage;
-    healthPoisonsHeal;
+    HealthPotionsHeal;
     swordAttackBuff;
 
     constructor(maxHealth, weaponDamage, heal, attackBuff) {
         this.characterMaxHealth = maxHealth;
         this.characterWeaponDamage = weaponDamage;
-        this.healthPoisonsHeal = heal;
+        this.HealthPotionsHeal = heal;
         this.swordAttackBuff = attackBuff;
     }
 }
@@ -54,7 +54,7 @@ class Game {
         let health = this.#configuration.characterMaxHealth;
         let weaponDamage = this.#configuration.characterWeaponDamage;
         let weaponBuff = this.#configuration.swordAttackBuff;
-        let heal = this.#configuration.healthPoisonsHeal;
+        let heal = this.#configuration.HealthPotionsHeal;
 
         for (let y = 0; y < this.#map.configuration.height; y++) {  
             let line = [];          
@@ -80,7 +80,7 @@ class Game {
                         break;
     
                     case "tileHP":
-                        line.push(new HealthPoison(heal, tile));
+                        line.push(new HealthPotion(heal, tile));
                         break;
     
                     case "tileSW":
@@ -293,7 +293,7 @@ class Game {
             this.deleteFromCollection(object, this.#enemies);
         }
 
-        if (object instanceof HealthPoison) {
+        if (object instanceof HealthPotion) {
             this.deleteFromCollection(object, this.#healthPotions);
         }
 

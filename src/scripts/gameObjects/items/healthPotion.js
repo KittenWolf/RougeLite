@@ -1,4 +1,4 @@
-class HealthPoison extends GameObject {
+class HealthPotion extends GameObject {
     #heal;
 
     constructor(heal, position) {
