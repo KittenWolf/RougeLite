@@ -89,6 +89,10 @@ h1 {
   z-index: 11;
 }
 
+.tile:hover {
+  border: 1px solid #dbdbdb;
+}
+
 .inventory-box {
   border: 2px solid #d0d0d0;
   float: left;

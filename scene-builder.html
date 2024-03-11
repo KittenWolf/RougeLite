@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Tinos:400,400i&amp;subset=cyrillic" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Tinos:400,400i&amp;subset=cyrillic"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/builder.css">
 
+    <script src="./modules/lib/config.js"></script>
+
     <title>Scene Builder</title>
 </head>
+
 <body>
     <div class="form" action="">
         <div class="_flex _flex-r _jc-sb _al-c">
@@ -24,58 +29,60 @@
                 <div class="_flex _al-c _mb-5">
                     <label for="height">Height</label>
                     <input type="number" name="height" id="height" value=24>
-                </div> 
+                </div>
                 <div class="_flex _al-c _mb-5">
                     <label for="containsRooms">Contains rooms?</label>
                     <input type="checkbox" name="containsRooms" id="containsRooms" checked>
                     <button id="generateBtn">Generate Map</button>
-                </div>                 
-            </div> 
+                </div>
+            </div>
             <span>Map Builder</span>
-        </div>  
+        </div>
         <hr>
         <div class="_flex _flex-r _jc-sa">
             <div id="tiles" class="field _flex _flex-r _jc-sa">
                 <div class="tile-category">
-                    <div class="tile-category-name">collisions</div>
-                    <div class="tile tileW brush" style="width: 50px; height: 50px;" tyle-type="tileW"></div>
+                    <div class="tile-category-name">erraser</div>
+                    <div class="tile brush" style="width: 50px; height: 50px;" tile-type=""></div>
+                </div>
+                <div class="tile-category">
+                    <div class="tile-category-name">obstacles</div>
+                    <div class="tile tileW brush" style="width: 50px; height: 50px;" tile-type="tileW"></div>
                 </div>
                 <div class="tile-category">
                     <div class="tile-category-name">play zones</div>
-                    <div class="tile tileF brush" style="width: 50px; height: 50px;" tyle-type="tileF"></div>
+                    <div class="tile tileF brush" style="width: 50px; height: 50px;" tile-type="tileF"></div>
                 </div>
                 <div class="tile-category">
                     <div class="tile-category-name">characters</div>
-                    <div class="tile tileE brush" style="width: 50px; height: 50px;" tyle-type="tileE"></div>
-                    <div class="tile tileP brush" style="width: 50px; height: 50px;" tyle-type="tileP"></div>
+                    <div class="tile tileE brush" style="width: 50px; height: 50px;" tile-type="tileE"></div>
+                    <div class="tile tileP brush" style="width: 50px; height: 50px;" tile-type="tileP"></div>
                 </div>
                 <div class="tile-category">
                     <div class="tile-category-name">items</div>
-                    <div class="tile tileHP brush" style="width: 50px; height: 50px;" tyle-type="tileHP"></div>
-                    <div class="tile tileSW brush" style="width: 50px; height: 50px;" tyle-type="tileSW"></div>
+                    <div class="tile tileHP brush" style="width: 50px; height: 50px;" tile-type="tileHP"></div>
+                    <div class="tile tileSW brush" style="width: 50px; height: 50px;" tile-type="tileSW"></div>
                 </div>
-            </div>            
-        </div>                            
-    </div>  
+            </div>
+        </div>
+    </div>
 
-    <div class="container">       
+    <div class="container">
         <div class="map-title _flex _al-c">
             <input type="text" name="height" id="mapName" placeholder="Type map name">
             <button id="saveBtn" class="_md-btn _primary_btn">Save map</button>
-        </div> 
+            <button id="clearBtn" class="_md-btn _primary_btn">Clear</button>
+            <button id="playBtn" class="_md-btn _primary_btn">Play</button>
+        </div>
 
         <div class="field-box">
             <div id="field" class="field">
-                
+
             </div>
         </div>
-    </div>   
-    
-    <script src="src/maps/maps.json"></script>
-    
-    <script src="src/scripts/lib.js"></script>
-    <script src="src/scripts/map.js"></script>
-    <script src="src/scripts/scene.js"></script>
-    <script src="src/scripts/map_builder.js"></script>
+    </div>
+
+    <script type="module" src="./modules/constructor.js"></script>
 </body>
+
 </html>
