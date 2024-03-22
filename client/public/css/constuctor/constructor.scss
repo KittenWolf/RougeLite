@@ -1,0 +1,22 @@
+.constructor-layer {
+    position: relative;
+    z-index: 199;
+}
+
+.map-name {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+}
+
+.map-resolution {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+.map-grid {
+    &>.tile {
+        border: 1px solid;
+    }
+}

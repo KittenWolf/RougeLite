@@ -1,0 +1,118 @@
+$assets_path: "../../../assets/UndeadLand/PNG/Objects_separately/";
+$tile_lib_path: "../../images/";
+
+.tileF {
+    width: 64px;
+    height: 64px;
+    background-image: url($tile_lib_path + "tile-F.png");
+}
+
+.tileW {
+    width: 64px;
+    height: 64px;
+    background-image: url($tile_lib_path + "tile-W.png");
+}
+
+.tileE {
+    width: 64px;
+    height: 64px;
+    background-image: url($tile_lib_path + "tile-E.png");
+    z-index: 10;
+}
+
+.tileP {
+    width: 64px;
+    height: 64px;
+    background-image: url($tile_lib_path + "tile-P.png");
+    z-index: 10;
+}
+
+.tileHP {
+    width: 64px;
+    height: 64px;
+    background-image: url($tile_lib_path + "tile-HP.png");
+    z-index: 9;
+}
+
+.tileSW {
+    width: 64px;
+    height: 64px;
+    background-image: url($tile_lib_path + "tile-SW.png");
+    z-index: 9;
+}
+
+// 
+// UndeadLand assets
+// 
+
+.ground-rock1_ul {
+    width: 16px;
+    height: 16px;
+    background-image: url($assets_path + "Ground_rock1.png");
+}
+
+.ground-rock2_ul {
+    width: 16px;
+    height: 16px;
+    background-image: url($assets_path + "Ground_rock2.png");
+}
+
+.ground-rock3_ul {
+    width: 16px;
+    height: 16px;
+    background-image: url($assets_path + "Ground_rock3.png");
+}
+
+.ground-rock4_ul {
+    width: 16px;
+    height: 16px;
+    background-image: url($assets_path + "Ground_rock4.png");
+}
+
+.ground-rock5_ul {
+    width: 16px;
+    height: 16px;
+    background-image: url($assets_path + "Ground_rock5.png");
+}
+
+.ground-rock_u_ul {
+    width: 48px;
+    height: 48px;
+    background-image: url($assets_path + "Ground_rock_u.png");
+}
+
+.ground-rock_u2_ul {
+    width: 64px;
+    height: 64px;
+    background-image: url($assets_path + "Ground_rock_u2.png");
+}
+
+.bounes-shadow1_10_ul {
+    width: 64px;
+    height: 64px;
+    background-image: url($assets_path + "Bones_shadow1_10.png");
+}
+
+.rock_shadow1_1_ul {
+    width: 64px;
+    height: 64px;
+    background-image: url($assets_path + "Rock_shadow1_1.png");
+}
+
+.rock_shadow1_2_ul {
+    width: 64px;
+    height: 64px;
+    background-image: url($assets_path + "Rock_shadow1_2.png");
+}
+
+.rock_shadow1_3_ul {
+    width: 64px;
+    height: 64px;
+    background-image: url($assets_path + "Rock_shadow1_3.png");
+}
+
+.rock_shadow1_4_ul {
+    width: 32px;
+    height: 32px;
+    background-image: url($assets_path + "Rock_shadow1_4.png");
+}

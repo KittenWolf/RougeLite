@@ -1,0 +1,316 @@
+body {
+  background: #111111;
+}
+
+.phpError {
+  background: #f74e4e;
+}
+
+marquee {
+  background: #000000;
+  color: #f4f4f4;
+}
+
+hr {
+  background: #292a2d;
+  border-color: #292a2d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f4f4f4;
+}
+
+p {
+  color: #a0a0a0;
+}
+
+.bold-text,
+.strong-text {
+  color: #f4f4f4;
+}
+
+.italic-text,
+.small-text,
+.bidirection,
+.quotation {
+  color: inherit;
+}
+
+.abbreviation,
+.definition {
+  color: #f4f4f4;
+}
+
+.sub-text,
+.sup-text {
+  color: inherit;
+}
+
+.link {
+  color: #a0a0a0;
+  text-decoration-color: #a0a0a0;
+}
+.link:hover {
+  color: #f4f4f4;
+  text-decoration-color: #f4f4f4;
+}
+.link:active {
+  color: #66949a;
+  text-decoration-color: #66949a;
+}
+
+.active-link {
+  color: #66949a;
+  text-decoration-color: #66949a;
+}
+
+.dir-header::before, .dir__file::before {
+  background: #f4f4f4;
+}
+
+.blockquote {
+  background: #292a2d;
+  color: #f4f4f4;
+  border-color: #f4f4f4;
+}
+
+._info-bq {
+  border-color: #66949a;
+}
+._info-bq > h3 {
+  color: #66949a;
+}
+
+._warning-bq {
+  border-color: #f0c859;
+}
+._warning-bq > h3 {
+  color: #f0c859;
+}
+
+._error-bq {
+  border-color: #f74e4e;
+}
+._error-bq > h3 {
+  color: #f74e4e;
+}
+
+.btn {
+  background: #292a2d;
+  color: #f4f4f4;
+}
+
+._dark-btn {
+  background: #111111;
+  color: #f4f4f4;
+}
+
+._error-btn {
+  background: #f74e4e;
+  color: #f4f4f4;
+}
+
+._warning-btn {
+  background: #f0c859;
+  color: #373737;
+}
+
+._primary-btn {
+  background: #66949a;
+  color: #f4f4f4;
+}
+
+._default-btn {
+  background: #292a2d;
+  color: #f4f4f4;
+}
+
+._disabled-btn {
+  background: #292a2d;
+  color: #f4f4f4;
+  opacity: 0.3;
+}
+
+.user-logo {
+  border-color: #111111;
+}
+
+.toolbar {
+  background: #111111;
+}
+
+.sidebar {
+  background: #292a2d;
+  color: #f4f4f4;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #292a2d;
+}
+.sidebar::-webkit-scrollbar {
+  background: #111111;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #66949a;
+}
+.sidebar .form-control__field,
+.sidebar .form-control__select, .sidebar__search {
+  background: #111111;
+  color: #f4f4f4;
+  border-color: #111111;
+}
+
+.drop-down-header {
+  background: #111111;
+  color: #f4f4f4;
+}
+.drop-down__item {
+  color: #f4f4f4;
+}
+
+.page-content::-webkit-scrollbar {
+  background: #111111;
+}
+.page-content::-webkit-scrollbar-thumb {
+  background: #66949a;
+}
+
+.page-header .page-title {
+  color: #f4f4f4;
+}
+.page-header .page-subtitle {
+  color: #f4f4f4;
+}
+.page-header .page-description {
+  color: #a0a0a0;
+}
+
+.page-header_http-error .page-title_http-error {
+  color: #66949a;
+}
+.page-header_http-error .page-subtitle_http-error {
+  color: #66949a;
+}
+.page-header_http-error .page-description_http-error {
+  color: #a0a0a0;
+}
+
+.panel-head {
+  color: #f4f4f4;
+}
+
+.panel-description {
+  color: #a0a0a0;
+}
+
+.form-group {
+  color: #a0a0a0;
+}
+.form-control {
+  color: #a0a0a0;
+}
+.form-control__field, .form-control__select {
+  background: #292a2d;
+  color: #a0a0a0;
+  border-color: #292a2d;
+}
+
+.form-control__radio + label:before {
+  background: #292a2d;
+}
+
+.form-control__radio + label:after {
+  background: #66949a;
+}
+
+.form-control__check + label:before {
+  background: #292a2d;
+}
+
+.form-control__check + label:after {
+  color: #66949a;
+}
+
+[type=range] {
+  background: #292a2d;
+}
+
+[type=range]::-webkit-slider-thumb {
+  background: #66949a;
+}
+
+[type=file]::-webkit-file-upload-button {
+  background: #66949a;
+  color: #f4f4f4;
+}
+
+.slider {
+  background: rgba(0, 0, 0, 0.75);
+}
+.slider-showcase::-webkit-scrollbar {
+  background: #111111;
+}
+.slider-showcase::-webkit-scrollbar-thumb {
+  background: #66949a;
+}
+
+.loader-wrapper {
+  background: #292a2d;
+  color: #f4f4f4;
+}
+
+._gradient-pre-loader {
+  background: linear-gradient(#000000 25%, #66949a 75%);
+}
+._gradient-pre-loader::after {
+  background: #292a2d;
+}
+
+._fill-pre-loader {
+  background: linear-gradient(#000000 50%, #66949a 50%);
+}
+._fill-pre-loader::after {
+  background: #292a2d;
+}
+
+._accent-loader {
+  background: #111111;
+}
+._accent-loader::after {
+  background: #66949a;
+}
+
+._dark-loader {
+  background: #111111;
+}
+._dark-loader::after {
+  background: #000000;
+}
+
+.map-name {
+  color: #f4f4f4;
+}
+
+.map-resolution {
+  color: #f4f4f4;
+}
+
+.map-grid > .tile {
+  border-color: #373737;
+}
+
+.scene::-webkit-scrollbar {
+  background: #111111;
+}
+.scene::-webkit-scrollbar-thumb {
+  background: #66949a;
+}
+
+.footer {
+  background: #000000;
+  color: #f4f4f4;
+}/*# sourceMappingURL=dark.css.map */

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../public/css/all.min.css">
+
+	<link rel="stylesheet" href="../public/css/main.css">
+	<link rel="stylesheet" href="../public/css/form/form.css">
+	<link rel="stylesheet" href="../public/css/constuctor/constructor.css">
+	<link rel="stylesheet" href="../public/css/tiles/tiles.css">
+	<link rel="stylesheet" href="../public/css/themes/dark.css">
+
+	<title>Constructor</title>
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<div id="toolbar" class="toolbar">
+			<ul class="tools">
+				<li class="tools__item">
+					<button class="btn _sm-icon-btn _dark-btn" type="button" title="main scene settings"
+						data-tool="settings">
+						<i class="fas fa-gear"></i>
+					</button>
+				</li>
+				<li class="tools__item">
+					<div class="drop-down">
+						<div class="drop-down-header">
+							<button class="btn _sm-icon-btn _dark-btn" type="button" title="generation tools"
+								data-tool="generationTools">
+								<i class="fas fa-wand-magic-sparkles"></i>
+							</button>
+						</div>
+						<div class="drop-down-body">
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="playgrounds"
+									data-tool="generationTools" data-tool-extention="playgrounds">
+									<i class="fas fa-layer-group"></i>
+								</button>
+							</div>
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="objects"
+									data-tool="generationTools" data-tool-extention="objects">
+									<i class="fas fa-tree"></i>
+								</button>
+							</div>
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="characters"
+									data-tool="generationTools" data-tool-extention="characters">
+									<i class="fas fa-ghost"></i>
+								</button>
+							</div>
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="items" data-tool="generationTools"
+									data-tool-extention="items">
+									<i class="fas fa-bomb"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="tools__item">
+					<div class="drop-down">
+						<div class="drop-down-header">
+							<button class="btn _sm-icon-btn _dark-btn" type="button" title="brush tools"
+								data-tool="brushTools">
+								<i class="fas fa-brush"></i>
+							</button>
+						</div>
+						<div class="drop-down-body">
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="playgrounds"
+									data-tool="brushTools" data-tool-extention="playgrounds">
+									<i class="fas fa-layer-group"></i>
+								</button>
+							</div>
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="objects" data-tool="brushTools"
+									data-tool-extention="objects">
+									<i class="fas fa-tree"></i>
+								</button>
+							</div>
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="characters" data-tool="brushTools"
+									data-tool-extention="characters">
+									<i class="fas fa-ghost"></i>
+								</button>
+							</div>
+							<div class="drop-down__item">
+								<button class="btn _sm-icon-btn" type="button" title="items" data-tool="brushTools"
+									data-tool-extention="items">
+									<i class="fas fa-bomb"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div id="sidebar" class="sidebar closed-sidebar">
+			<button id="close-sidebar-btn" class="btn _sm-icon-btn" type="button" title="Close sidebar button">
+				<i class="fas fa-times"></i>
+			</button>
+
+			<div id="settings" data-tool="settings" hidden>
+				<h2>Main map configuration</h2>
+
+				<form id="settingsForm" class="form solid-form _v">
+					<div class="form-control _h">
+						<label class="form__label" for="mapNameEditor">Map name</label>
+						<input type="text" class="form-control__field" name="map-name" id="mapNameEditor"
+							placeholder="New map" />
+					</div>
+					<div class="form-control-group _v">
+						<blockquote class="blockquote _info-bq">
+							<h3>
+								<i class="fas fa-circle-info"></i>
+								Info
+							</h3>
+							Map size equal to (width * height) * <abbr title="Minimum tile size is 16px"
+								class="abbreviation">tileSize</abbr>
+						</blockquote>
+
+						<div class="form-control _h">
+							<label class="form__label" for="mapWidthEditor">Width</label>
+							<input type="text" class="form-control__field" name="map-width" id="mapWidthEditor"
+								value="40" />
+						</div>
+						<div class="form-control _h">
+							<label class="form__label" for="mapHeightEditor">Height</label>
+							<input type="text" class="form-control__field" name="map-height" id="mapHeightEditor"
+								value="20" />
+						</div>
+					</div>
+
+					<div class="form-control">
+						<button id="settingsBtn" class="btn _md-btn _primary-btn" type="submit">Create scene</button>
+					</div>
+				</form>
+			</div>
+
+			<div id="generationTools" data-tool="generationTools" hidden>
+				<h2>Generation tools</h2>
+
+				<blockquote class="blockquote _warning-bq">
+					<h3>
+						<i class="fas fa-triangle-exclamation"></i>
+						Warning!
+					</h3>
+					Generation tools is not ready yet.
+					<br><br>
+					<button class="btn _md-btn _warning-btn">Generate</button>
+				</blockquote>
+			</div>
+
+			<div id="brushTools" data-tool="brushTools" hidden>
+				<h2>Brush tools</h2>
+			</div>
+		</div>
+
+		<main class="page-content">
+			<div id="constructorLayer" class="constructor-layer">
+				<div id="mapName" class="map-name">
+					New map
+				</div>
+				<div id="mapResolution" class="map-resolution">
+					640 x 320px
+				</div>
+			</div>
+
+			<div id="game" class="game">
+				<div id="scene" class="scene">
+					<div id="mapLayout" class="map-layout map-grid">
+
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="../public/js/main.js"></script>
+	<script src="../public/js/constructor.js"></script>
+</body>
+
+</html>

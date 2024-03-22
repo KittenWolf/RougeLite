@@ -1,0 +1,384 @@
+$absolute: #000000;
+$primary-color: #111111;
+$secondary-color: #292a2d;
+$third-color: #f4f4f4;
+
+$page-background: #111111;
+$sidebar-background: #292a2d;
+$content-background: #111111;
+
+$text-primary: #f4f4f4;
+$text-subhead: #a0a0a0;
+$text-secondary: #373737;
+$text-tertiary: #111111;
+
+// $accent: #7b678f;
+// $accent: #9a8866;
+$accent: #66949a;
+$warning: #f0c859;
+$error: #f74e4e;
+
+body {
+    background: $page-background;
+}
+
+.phpError {
+    background: $error;
+}
+
+marquee {
+    background: $absolute;
+    color: $text-primary;
+}
+
+hr {
+    background: $secondary-color;
+    border-color: $secondary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $text-primary;
+}
+
+p {
+    color: $text-subhead;
+}
+
+.bold-text,
+.strong-text {
+    color: $text-primary;
+}
+
+.italic-text,
+.small-text,
+.bidirection,
+.quotation {
+    color: inherit;
+}
+
+.abbreviation,
+.definition {
+    color: $text-primary;
+}
+
+.sub-text,
+.sup-text {
+    color: inherit;
+}
+
+.link {
+    color: $text-subhead;
+    text-decoration-color: $text-subhead;
+
+    &:hover {
+        color: $text-primary;
+        text-decoration-color: $text-primary;
+    }
+
+    &:active {
+        color: $accent;
+        text-decoration-color: $accent;
+    }
+}
+
+.active-link {
+    color: $accent;
+    text-decoration-color: $accent;
+}
+
+.dir {
+    &-header, &__file {
+        &::before {
+            background: $text-primary;
+        }
+    }
+}
+
+.blockquote {
+    background: $secondary-color;
+    color: $text-primary;
+    border-color: $text-primary;
+}
+
+._info-bq {
+    border-color: $accent;
+
+    &>h3 {
+        color: $accent;
+    }
+}
+
+._warning-bq {
+    border-color: $warning;
+
+    &>h3 {
+        color: $warning;
+    }
+}
+
+._error-bq {
+    border-color: $error;
+
+    &>h3 {
+        color: $error;
+    }
+}
+
+.btn {
+    background: $secondary-color;
+    color: $text-primary;
+}
+
+._dark-btn {
+    background: $content-background;
+    color: $text-primary;
+}
+
+._error-btn {
+    background: $error;
+    color: $text-primary;
+}
+
+._warning-btn {
+    background: $warning;
+    color: $text-secondary;
+}
+
+._primary-btn {
+    background: $accent;
+    color: $text-primary;
+}
+
+._default-btn {
+    background: $secondary-color;
+    color: $text-primary;
+}
+
+._disabled-btn {
+    background: $secondary-color;
+    color: $text-primary;
+    opacity: .3;
+}
+
+.user {
+    &-logo {
+        border-color: $content-background;
+    }
+}
+
+.toolbar {
+    background: $page-background;
+}
+
+.sidebar {
+    background: $sidebar-background;
+    color: $text-primary;
+
+    &::-webkit-scrollbar-track {
+        background: $secondary-color;
+    }
+
+    &::-webkit-scrollbar {
+        background: $content-background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $accent;
+    }
+
+    .form-control__field,
+    .form-control__select,
+    &__search {
+        background: $primary-color;
+        color: $text-primary;
+        border-color: $primary-color;
+    }
+}
+
+.drop-down {
+    &-header {
+        background: $primary-color;
+        color: $text-primary;
+    }
+
+    &__item {
+        color: $text-primary;
+    }
+}
+
+.page-content {
+    &::-webkit-scrollbar {
+        background: $content-background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $accent;
+    }
+}
+
+.page-header {
+    .page-title {
+        color: $text-primary;
+    }
+
+    .page-subtitle {
+        color: $text-primary;
+    }
+
+    .page-description {
+        color: $text-subhead;
+    }
+}
+
+.page-header_http-error {
+    .page-title_http-error {
+        color: $accent;
+    }
+
+    .page-subtitle_http-error {
+        color: $accent;
+    }
+
+    .page-description_http-error {
+        color: $text-subhead;
+    }
+}
+
+.panel-head {
+    color: $text-primary;
+}
+
+.panel-description {
+    color: $text-subhead;
+}
+
+.form {
+    &-group {
+        color: $text-subhead;
+    }
+
+    &-control {
+        color: $text-subhead;
+
+        &__field,
+        &__select {
+            background: $secondary-color;
+            color: $text-subhead;
+            border-color: $secondary-color;
+        }
+    }
+}
+
+.form-control__radio+label:before {
+    background: $secondary-color;
+}
+
+.form-control__radio+label:after {
+    background: $accent;
+}
+
+.form-control__check+label:before {
+    background: $secondary-color;
+}
+
+.form-control__check+label:after {
+    color: $accent;
+}
+
+[type=range] {
+    background: $secondary-color;
+}
+
+[type=range]::-webkit-slider-thumb {
+    background: $accent;
+}
+
+[type=file]::-webkit-file-upload-button {
+    background: $accent;
+    color: $text-primary;
+}
+
+.slider {
+    background: rgba(0, 0, 0, .75);
+
+    &-showcase {
+        &::-webkit-scrollbar {
+            background: $content-background;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $accent;
+        }
+    }
+}
+
+.loader-wrapper {
+    background: $secondary-color;
+    color: $text-primary;
+}
+
+._gradient-pre-loader {
+    background: linear-gradient($absolute 25%, $accent 75%);
+
+    &::after {
+        background: $secondary-color;
+    }
+}
+
+._fill-pre-loader {
+    background: linear-gradient($absolute 50%, $accent 50%);
+
+    &::after {
+        background: $secondary-color;
+    }
+}
+
+._accent-loader {
+    background: $primary-color;
+
+    &::after {
+        background: $accent;
+    }
+}
+
+._dark-loader {
+    background: $primary-color;
+
+    &::after {
+        background: $absolute;
+    }
+}
+
+.map-name {
+    color: $text-primary;
+}
+
+.map-resolution {
+    color: $text-primary;
+}
+
+.map-grid {
+    &>.tile {
+        border-color: $text-secondary;
+    }
+}
+
+.scene {
+    &::-webkit-scrollbar {
+        background: $content-background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $accent;
+    }
+}
+
+.footer {
+    background: $absolute;
+    color: $text-primary;
+}
