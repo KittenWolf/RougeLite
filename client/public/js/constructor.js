@@ -36,7 +36,7 @@ class Constructor {
 		this.heightEditor = document.getElementById("mapHeightEditor");
 
 		this.settingsForm = document.getElementById("settingsForm");
-		this.settingsBtn = document.getElementById("settingsBtn");
+		this.getSceneLayout = document.getElementById("getLayoutBtn");
 	}
 
 	#initEvents() {
@@ -50,13 +50,35 @@ class Constructor {
 
 		const calculateMapResolution = this.#calculateMapResolution.bind(this);
 		const setMapName = this.#setMapName.bind(this);
+		const getSceneLayout = this.#getSceneLayout.bind(this);
 
 		this.nameEditor.addEventListener("change", setMapName);
 		this.widthEditor.addEventListener("change", calculateMapResolution);
 		this.heightEditor.addEventListener("change", calculateMapResolution);
-		// this.settingsBtn.addEventListener("click", (e) => {
-		// 	this.settingsForm.submit();
-		// });
+		this.getSceneLayout.addEventListener("click", getSceneLayout);		
+	}
+
+	async #getSceneLayout(e) {
+		e.preventDefault();
+
+		const data = {};
+
+		data.method = 'getLayout';
+		data.mapName = this.nameEditor.value;
+		data.mapWidth = this.widthEditor.value;
+		data.mapHeight = this.heightEditor.value;
+
+		const stringify = JSON.stringify(data);
+
+		const res = await fetch('/constructor', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: stringify
+		});
+
+		console.log(await res.json());
 	}
 
 	#setMapName() {
