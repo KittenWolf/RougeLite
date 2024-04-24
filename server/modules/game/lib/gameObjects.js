@@ -1,17 +1,15 @@
-import Point from "./point.js";
 
 // environments
 import { Wall } from "../environment/obstacles.js";
 import { Floor } from "../environment/playground.js";
 
 // characters
-import { Player } from "../characters/player.js";
 import { Rouge } from "../characters/enemies.js";
+import { Player } from "../characters/player.js";
 
 // items
 import { HealthPotion } from "../items/collectable.js";
 import { Sword } from "../items/consumable.js";
-import GameObject from "./gameObject.js";
 
 export const gameObjectsList = [
     new Wall(),

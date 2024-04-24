@@ -1,3 +1,5 @@
+import path from 'node:path';
+
 export const mimeTypes = Object.freeze({
 	'.txt': 'text/plain',
 
@@ -17,3 +19,8 @@ export const mimeTypes = Object.freeze({
 	'.woff': 'font/woff',
 	'.woff2': 'font/woff2',
 });
+
+export function getMime(pathname) {	
+	const ext = path.extname(pathname);	
+	return mimeTypes[ext] || mimeTypes['.txt'];
+}
