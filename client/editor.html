@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="./public/css/main.css" type="text/css">
 	<link rel="stylesheet" href="./public/css/form/form.css" type="text/css">
-	<link rel="stylesheet" href="./public/css/constuctor/constructor.css" type="text/css">
+	<link rel="stylesheet" href="./public/css/editor/editor.css" type="text/css">
 	<link rel="stylesheet" href="./public/css/tiles/tiles.css" type="text/css">
 	<link rel="stylesheet" href="./public/css/themes/dark.css" type="text/css">
 
@@ -24,7 +24,7 @@
 			<ul class="tools">
 				<li class="tools__item">
 					<button class="btn _sm-icon-btn _dark-btn" type="button" title="main scene settings"
-						data-tool="settings">
+						data-tool="settingsTools">
 						<i class="fas fa-gear"></i>
 					</button>
 				</li>
@@ -108,14 +108,14 @@
 				<i class="fas fa-times"></i>
 			</button>
 
-			<div id="settings" data-tool="settings" hidden>
+			<div id="settingsTools" data-tool="settingsTools" hidden>
 				<h2>Main map configuration</h2>
 
 				<form id="settingsForm" class="form solid-form _v">
 					<div class="form-control _h">
 						<label class="form__label" for="mapNameEditor">Map name</label>
 						<input type="text" class="form-control__field" name="map-name" id="mapNameEditor"
-							placeholder="New map" />
+							placeholder="New map" value="New map" />
 					</div>
 					<div class="form-control-group _v">
 						<blockquote class="blockquote _info-bq">
@@ -130,7 +130,7 @@
 						<div class="form-control _h">
 							<label class="form__label" for="mapWidthEditor">Width</label>
 							<input type="text" class="form-control__field" name="map-width" id="mapWidthEditor"
-								value="40" />
+								value="20" />
 						</div>
 						<div class="form-control _h">
 							<label class="form__label" for="mapHeightEditor">Height</label>
@@ -139,8 +139,12 @@
 						</div>
 					</div>
 
+					<!-- <div class="form-control">
+						<button id="getSceneBtn" class="btn _md-btn _primary-btn" type="submit">Create scene</button>
+					</div> -->
+
 					<div class="form-control">
-						<button id="getLayoutBtn" class="btn _md-btn _primary-btn" type="submit">Create scene</button>
+						<button id="createSceneBtn" class="btn _md-btn _primary-btn" type="button">Create scene</button>
 					</div>
 				</form>
 			</div>
@@ -153,9 +157,7 @@
 						<i class="fas fa-triangle-exclamation"></i>
 						Warning!
 					</h3>
-					Generation tools is not ready yet.
-					<br><br>
-					<button class="btn _md-btn _warning-btn">Generate</button>
+					Generation tools are not ready yet.
 				</blockquote>
 			</div>
 
@@ -165,27 +167,18 @@
 		</div>
 
 		<main class="page-content">
-			<div id="constructorLayer" class="constructor-layer">
-				<div id="mapName" class="map-name">
-					New map
-				</div>
-				<div id="mapResolution" class="map-resolution">
-					640 x 320px
-				</div>
-			</div>
-
 			<div id="game" class="game">
 				<div id="scene" class="scene">
-					<div id="mapLayout" class="map-layout map-grid">
+					<canvas id="mapLayout" class="map-layout map-grid" width="0" height="0">
 
-					</div>
+					</canvas>
 				</div>
 			</div>
 		</main>
 	</div>
 
-	<script src="./public/js/main.js"></script>
-	<script src="./public/js/constructor.js"></script>
+	<script type="module" src="./public/js/main.js"></script>
+	<script type="module" src="./public/js/editor/Editor.js"></script>
 </body>
 
 </html>

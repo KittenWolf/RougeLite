@@ -92,7 +92,9 @@ p {
 }
 
 .dir {
-    &-header, &__file {
+
+    &-header,
+    &__file {
         &::before {
             background: $text-primary;
         }
@@ -354,6 +356,16 @@ p {
     }
 }
 
+.scene {
+    &::-webkit-scrollbar {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $accent;
+    }
+}
+
 .map-name {
     color: $text-primary;
 }
@@ -368,14 +380,24 @@ p {
     }
 }
 
-.scene {
-    &::-webkit-scrollbar {
-        background: $content-background;
-    }
+.map-layout {
+    background: linear-gradient(45deg, $text-primary, transparent);
+}
 
-    &::-webkit-scrollbar-thumb {
-        background: $accent;
+.ruler {
+    &-mark,
+    &-mark-special {
+        color: $text-primary;
+
+        &::after {
+            background: $text-primary;
+        }
     }
+}
+
+.horizontal-thumb,
+.vertical-thumb {
+    background: $text-primary;
 }
 
 .footer {

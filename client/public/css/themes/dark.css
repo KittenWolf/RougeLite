@@ -291,6 +291,13 @@ p {
   background: #000000;
 }
 
+.scene::-webkit-scrollbar {
+  background: transparent;
+}
+.scene::-webkit-scrollbar-thumb {
+  background: #66949a;
+}
+
 .map-name {
   color: #f4f4f4;
 }
@@ -303,11 +310,20 @@ p {
   border-color: #373737;
 }
 
-.scene::-webkit-scrollbar {
-  background: #111111;
+.map-layout {
+  background: linear-gradient(45deg, #f4f4f4, transparent);
 }
-.scene::-webkit-scrollbar-thumb {
-  background: #66949a;
+
+.ruler-mark, .ruler-mark-special {
+  color: #f4f4f4;
+}
+.ruler-mark::after, .ruler-mark-special::after {
+  background: #f4f4f4;
+}
+
+.horizontal-thumb,
+.vertical-thumb {
+  background: #f4f4f4;
 }
 
 .footer {

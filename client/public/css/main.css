@@ -52,50 +52,7 @@ hr {
 
 .game {
   width: 100%;
-  height: 100vh;
-}
-
-.scene {
-  width: 100%;
   height: 100%;
-  overflow: scroll;
-  position: relative;
-}
-.scene::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-.map-layout {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  top: 50%;
-  transform: translateY(-37.7%);
-}
-
-.map-layout .tile {
-  position: relative;
-  background-size: 100%;
-}
-
-.map-layout .tileE .health {
-  height: 3px;
-  background-color: #ff0000;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 11;
-}
-
-.map-layout .tileP .health {
-  height: 3px;
-  background-color: #00ff00;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 11;
 }
 
 .toolbar {
@@ -246,7 +203,6 @@ hr {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow-y: scroll;
   transition: 0.3s ease;
 }
 .page-content::-webkit-scrollbar {
