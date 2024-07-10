@@ -248,6 +248,18 @@ p {
   color: #f4f4f4;
 }
 
+.tile-collection::-webkit-scrollbar {
+  background: #111111;
+}
+.tile-collection::-webkit-scrollbar-thumb {
+  background: #66949a;
+}
+
+legend {
+  background: #111111;
+  color: #f4f4f4;
+}
+
 .slider {
   background: rgba(0, 0, 0, 0.75);
 }

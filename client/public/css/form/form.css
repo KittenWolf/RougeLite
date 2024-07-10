@@ -136,6 +136,11 @@ textarea.form-control__field {
   line-height: 1.5em;
 }
 
+legend {
+  width: 150px;
+  text-align: center;
+}
+
 [type=range] {
   width: 100%;
   height: 5px;

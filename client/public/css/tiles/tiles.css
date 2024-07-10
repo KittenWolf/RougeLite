@@ -1,41 +1,51 @@
-.tileF {
-  width: 64px;
-  height: 64px;
-  background-image: url("../../images/tile-F.png");
+.xxlTile {
+  width: 256px;
+  height: 256px;
 }
 
-.tileW {
-  width: 64px;
-  height: 64px;
-  background-image: url("../../images/tile-W.png");
+.xlTile {
+  width: 128px;
+  height: 128px;
 }
 
-.tileE {
+.lTile {
   width: 64px;
   height: 64px;
-  background-image: url("../../images/tile-E.png");
-  z-index: 10;
 }
 
-.tileP {
-  width: 64px;
-  height: 64px;
-  background-image: url("../../images/tile-P.png");
-  z-index: 10;
+.mTile {
+  width: 32px;
+  height: 32px;
 }
 
-.tileHP {
-  width: 64px;
-  height: 64px;
-  background-image: url("../../images/tile-HP.png");
-  z-index: 9;
+.smTile {
+  width: 16px;
+  height: 16px;
 }
 
-.tileSW {
-  width: 64px;
-  height: 64px;
-  background-image: url("../../images/tile-SW.png");
-  z-index: 9;
+.xsTile {
+  width: 8px;
+  height: 8px;
+}
+
+.tile-collection > .xxlTile,
+.tile-collection > .xlTile,
+.tile-collection > .lTile,
+.tile-collection > .mTile,
+.tile-collection > .smTile,
+.tile-collection > .xsTile,
+.tile-collection > .othersTile {
+  margin: 5px;
+}
+
+.xxlTile:hover,
+.xlTile:hover,
+.lTile:hover,
+.mTile:hover,
+.smTile:hover,
+.xsTile:hover,
+.othersTile:hover {
+  border: 1px solid;
 }
 
 .ground-rock1_ul {

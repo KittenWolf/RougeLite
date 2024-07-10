@@ -91,6 +91,14 @@ hr {
   cursor: pointer;
 }
 
+.close-sidebar-btn {
+  background: transparent;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
 .opened-sidebar {
   transform: translateX(0);
 }
@@ -107,6 +115,7 @@ hr {
   right: 0;
   top: 0;
   z-index: 99;
+  overflow-y: scroll;
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
@@ -115,6 +124,10 @@ hr {
 }
 .sidebar.closed-sidebar ~ .page-content {
   padding-right: 60px;
+}
+.sidebar::-webkit-scrollbar, .sidebar::-webkit-scrollbar-thumb {
+  width: 3px;
+  height: 3px;
 }
 
 .drop-down {

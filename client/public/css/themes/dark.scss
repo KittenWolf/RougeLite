@@ -305,6 +305,21 @@ p {
     color: $text-primary;
 }
 
+.tile-collection {
+    &::-webkit-scrollbar {
+        background: $content-background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $accent;
+    }
+}
+
+legend {
+    background: $primary-color;
+    color: $text-primary;
+}
+
 .slider {
     background: rgba(0, 0, 0, .75);
 
