@@ -21,7 +21,7 @@ export default class Sidebar extends Component {
 		this.closeButton = new Button(
 			this.HTMLElement, 
 			{ 
-				classList: 'btn _sm-icon-btn close-sidebar-btn',
+				classList: 'btn _sm-icon-btn _close-btn',
 				title: 'Sidebar close button',
 				type: 'button',
 				innerHTML: '<i class="fas fa-times"></i>'

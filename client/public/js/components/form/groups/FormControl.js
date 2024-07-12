@@ -23,7 +23,7 @@ class FormControl extends Component {
 	/**
 	 * Get value from form element
 	 * @abstract
-	 * @returns {any}
+	 * @returns {*}
 	 */
 	getValue() {}
 }

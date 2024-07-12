@@ -202,6 +202,10 @@ p {
     }
 }
 
+.popup {
+    background: $content-background;
+}
+
 .drop-down {
     &-header {
         background: $primary-color;

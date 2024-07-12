@@ -21,6 +21,12 @@ h1 {
     text-align: center;
 }
 
+h2 {    
+    padding: 10px 0px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
 p {
     text-align: justify;
     text-justify: inter-word;
@@ -73,32 +79,6 @@ hr {
     &__item {
         margin-block-start: 5px;
     }
-}
-
-#open-sidebar-btn {
-    background: transparent;
-    z-index: 99;
-    position: absolute;
-    left: 50%;
-    top: 10px;
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
-#close-sidebar-btn {
-    background: transparent;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-
-.close-sidebar-btn {
-    background: transparent;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    cursor: pointer;
 }
 
 .opened-sidebar {
@@ -181,6 +161,17 @@ hr {
     &._dropped {
         max-height: fit-content;
     }
+}
+
+.popup {
+    width: 500px;
+    padding: 100px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -5px 5px 10px rgb(0, 0, 0, .3);
+    z-index: 100;
 }
 
 .dir {  
@@ -308,9 +299,8 @@ hr {
 ._close-btn {
     background: transparent !important;
     position: absolute;
+    left: 10px;
     top: 10px;
-    right: 0;
-    z-index: 55;
 }
 
 ._prev-btn {

@@ -164,6 +164,10 @@ p {
   border-color: #111111;
 }
 
+.popup {
+  background: #111111;
+}
+
 .drop-down-header {
   background: #111111;
   color: #f4f4f4;

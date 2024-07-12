@@ -1,3 +1,5 @@
+import { config } from "../config.js";
+
 export default class Rulers {
 	#sceneContext;
 	#layoutContext;
@@ -21,7 +23,7 @@ export default class Rulers {
 	#updateHorizontalRulerMarks() {
 		this.#horizontalRuler.innerHTML = '';
 
-		const marksCount = this.#layoutContext.offsetWidth / 16;
+		const marksCount = this.#layoutContext.offsetWidth / config.tileSize;
 		const marks = this.#createRulerMarks(marksCount);
 		
 		marks.forEach(mark => {
@@ -32,7 +34,7 @@ export default class Rulers {
 	#updateVerticalRulerMarks() {
 		this.#verticalRuler.innerHTML = '';
 		
-		const marksCount = this.#layoutContext.offsetHeight / 16;
+		const marksCount = this.#layoutContext.offsetHeight / config.tileSize;
 		const marks = this.#createRulerMarks(marksCount);
 		
 		marks.forEach(mark => {
@@ -45,37 +47,37 @@ export default class Rulers {
 		this.#rulers = document.createElement('div');
 		this.#rulers.id = 'rulers';
 
-		this.#horizontalRuler = this.#createHorizontalRuler();
-		this.#verticalRuler = this.#createVerticalRuler();
+		this.#createHorizontalRuler();
+		this.#createVerticalRuler();
 
 		this.#rulers.append(this.#horizontalRuler, this.#verticalRuler);
 		this.#sceneContext.appendChild(this.#rulers);
+	}
+
+	#createHorizontalRuler() {
+		this.#horizontalRuler = document.createElement('div');
+		this.#horizontalRuler.id = 'horizontalRuler';
+		this.#horizontalRuler.classList = 'ruler-h';
+
+		this.#updateHorizontalRulerMarks();
+	}
+
+	#createVerticalRuler() {
+		this.#verticalRuler = document.createElement('div');
+		this.#verticalRuler.id = 'verticalRuler';
+		this.#verticalRuler.classList = 'ruler-v';
+
+		this.#updateVerticalRulerMarks();
 	}
 
 	#createMark(i) {
 		var rulerMark = new RulerMark();
 
 		var mark = (i % 4 == 0) 
-			? rulerMark.createSpecialMark(i * 16)
+			? rulerMark.createSpecialMark(i * config.tileSize)
 			: rulerMark.createDefaultMark();
 
 		return mark;
-	}
-
-	#createHorizontalRuler() {
-		let horizontalRuler = document.createElement('div');
-		horizontalRuler.id = 'horizontalRuler';
-		horizontalRuler.classList = 'ruler-h';
-
-		return horizontalRuler;
-	}
-
-	#createVerticalRuler() {
-		let verticalRuler = document.createElement('div');
-		verticalRuler.id = 'verticalRuler';
-		verticalRuler.classList = 'ruler-v';
-	
-		return verticalRuler;
 	}
 
 	#createRulerMarks(count) {

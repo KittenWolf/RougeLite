@@ -12,11 +12,5 @@ export default class Game extends Component {
 	 */
 	constructor(context) {
 		super(context, { classList: 'game' });
-
-		this.initElementContent();
-	}
-
-	initElementContent() {
-		this.scene = new Scene(this.HTMLElement);
 	}
 }

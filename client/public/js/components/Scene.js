@@ -12,11 +12,5 @@ export default class Scene extends Component {
 	 */
 	constructor(context) {
 		super(context, { classList: 'scene' });
-
-		this.initElementContent();
-	}
-
-	initElementContent() {
-		this.canvas = new Canvas(this.HTMLElement);
 	}
 }

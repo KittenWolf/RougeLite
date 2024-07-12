@@ -20,7 +20,7 @@ export default class BrushToolSidebarBlock extends Component {
 	/**
 	 * 
 	 * @param {HTMLElement} context HTML element where created object will be appended
-	 * @param {any} assets Assests of the game
+	 * @param {*} assets Assests of the game
 	 */
 	constructor(context, assets) {
 		super(context, { innerHTML: '<h2><i class="fas fa-brush"></i> Brush tool</h2>' });
