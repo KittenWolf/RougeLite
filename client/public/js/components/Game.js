@@ -1,4 +1,3 @@
-import Scene from "./Scene.js";
 import Component from "./Component.js";
 
 /**

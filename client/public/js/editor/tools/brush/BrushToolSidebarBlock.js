@@ -1,6 +1,7 @@
-import Tile from "../../Tile.js";
-import Component, { ComponentAttrs } from "../../../components/Component.js";
 import { SelectFormControl } from "../../../components/form/groups/FormControl.js";
+import Component, { ComponentAttrs } from "../../../components/Component.js";
+
+import Tile from "../../Tile.js";
 
 /**
  * Represent Brush tool sidebar block component

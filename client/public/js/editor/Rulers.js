@@ -18,6 +18,8 @@ export default class Rulers {
 	update() {
 		this.#updateHorizontalRulerMarks();
 		this.#updateVerticalRulerMarks();
+
+		console.log(this.#layoutContext, this.#sceneContext);
 	}
 
 	#updateHorizontalRulerMarks() {
@@ -93,9 +95,7 @@ export default class Rulers {
 }
 
 class RulerMark {
-	constructor() {
-
-	}
+	constructor() {	}
 
 	createDefaultMark() {
 		var mark = document.createElement('div');

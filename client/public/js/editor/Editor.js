@@ -1,11 +1,11 @@
 import { InputFormControl } from "../components/form/groups/FormControl.js";
 import { Button } from "../components/Button.js";
+import { config } from "../config.js";
 
 import Component from "../components/Component.js";
 import Form from "../components/form/Form.js";
 import Popup from "../components/Popup.js";
 import Workspace from "./Workspace.js";
-import { config } from "../config.js";
 
 class Editor {
 	#workspace;

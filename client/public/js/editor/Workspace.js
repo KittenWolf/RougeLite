@@ -64,3 +64,5 @@ export default class Workspace {
 		this.rulers.update();
 	}
 }
+
+const workspace = new Workspace({ width: 40 * config.tileSize, height: 40 * config.tileSize });

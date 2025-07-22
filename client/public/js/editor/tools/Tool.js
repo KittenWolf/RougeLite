@@ -11,6 +11,7 @@ export class Tool {
 	sidebarBlock;
 	
 	/**
+	 * 
 	 * @param {Workspace} workspace 
 	 */
 	constructor(workspace) {

@@ -1,4 +1,3 @@
-import Canvas from "./Canvas.js";
 import Component from "./Component.js";
 
 /**
